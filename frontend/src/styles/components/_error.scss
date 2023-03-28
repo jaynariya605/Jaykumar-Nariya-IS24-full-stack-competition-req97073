@@ -1,0 +1,20 @@
+.error-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d93025; /* red color */
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #333; /* dark gray color */
+    text-align: center;
+  }
+}

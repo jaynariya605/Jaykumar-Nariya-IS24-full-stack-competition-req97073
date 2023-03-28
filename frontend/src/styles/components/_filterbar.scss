@@ -1,0 +1,41 @@
+.filter-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+
+    input {
+        width: 100%;
+        padding: 8px 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        margin-right: 1rem;
+  
+        &:focus {
+          outline: none;
+          border-color: #5e9ed6;
+        }
+      }
+
+      button {
+        width: 10%;
+        background-color: #1b7da3;
+        padding: 8px 10px;
+        border: 1px solid #000;
+        border-radius: 4px;
+        font-size: 14px;
+        color: #fff;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #184353;
+        }
+
+        @media screen and (max-width: 600px) {
+          width:40%
+      }
+    }
+      
+    }
