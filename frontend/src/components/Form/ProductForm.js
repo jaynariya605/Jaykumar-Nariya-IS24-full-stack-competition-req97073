@@ -32,6 +32,10 @@ const ProductForm = ({ product, onSubmithandle, type }) => {
     // Define the handleSubmit function to handle form submission.
     const handleSubmit = async (event) => {
         event.preventDefault();
+        if(!formData.developers){
+            setError("Developers can't be empty");
+            return;
+        }
         const developers = formData.developers.split(", ");
 
         if (developers.length > 5) {
@@ -49,7 +53,7 @@ const ProductForm = ({ product, onSubmithandle, type }) => {
         };
 
         // Check if any of the fields in updatedProduct are empty
-        if (!updatedProduct.productName || !updatedProduct.productOwnerName || !updatedProduct.developers ||
+        if (!updatedProduct.productName || !updatedProduct.productOwnerName  ||
             !updatedProduct.scrumMasterName || !updatedProduct.startDate || !updatedProduct.methodology) {
             setError('One or more fields are empty.');
             return;

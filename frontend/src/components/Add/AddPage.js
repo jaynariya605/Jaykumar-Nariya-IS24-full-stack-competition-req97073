@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useNavigate  } from 'react-router-dom';
 import ProductForm from '../Form/ProductForm'
 
@@ -5,7 +6,7 @@ const apiUrl = 'http://localhost:3000/api/v1/products';
 
 const AddPage = () => {
     // Initialize error state
-    let error = "";
+    const [error, setError] = useState();
     // Hook to navigate to other pages
     const navigate = useNavigate();
 
@@ -24,7 +25,7 @@ const AddPage = () => {
             navigate("/");
         } catch (e) {
             // Set error message if request fails
-            error = e.message;
+            setError(e.message)
         }
     }
 

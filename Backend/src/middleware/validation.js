@@ -3,7 +3,7 @@
  * @param {Object} req - The HTTP request object.
  * @param {Object} res - The HTTP response object.
  */
-const validation = async (req, res) => {
+const validation = async (req, res, next) => {
     // Fields that are required to create a new product
     const requireFields = [
         'productName',
@@ -39,6 +39,7 @@ const validation = async (req, res) => {
     if (emptyFields.length > 0) {
         return res.status(400).json({ error: `${emptyFields.join(', ')} fields can't be empty` });
     }
+    next() 
 
 };
 
